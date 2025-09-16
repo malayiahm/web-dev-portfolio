@@ -19,11 +19,11 @@
 <body>
 	<header>
 	  <img src="fashion-3.jpg" alt="Heels" height="60" width="40" id="logoimg">
-      <form id="login" action="T6-Tables/index.html" method="post">
-          <input type="text" name="userName" id="userBox" placeholder="username">
-          <input type="password" name="userPwd" id="pwBox" placeholder="password">
-		  <button type="submit">Login</button>
-      </form>
+      <form id="login" onsubmit="event.preventDefault(); window.location.href='https://malayiahm.github.io/web-dev-portfolio/T6-Tables/';">
+  		<input type="text" name="userName" id="userBox" placeholder="username" required>
+  		<input type="password" name="userPwd" id="pwBox" placeholder="password" required>
+  		<button type="submit">Login</button>
+	  </form>
 	  <nav>
          <a id="navicon" href="#"><img src="fashion.jpg" alt="Heels"></a>
          <ul>
@@ -72,5 +72,6 @@
 </body>
 
 </html>
+
 
 
