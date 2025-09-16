@@ -4,8 +4,77 @@
   <meta charset="UTF-8">
   <title>Malayiah Mikell | Web Development Portfolio</title>
   <link rel="stylesheet" href="style.css"> <!-- Optional: add styling later -->
+  <style>
+    /* Geometric Abstract Background */
+    body {
+      background-color: black;
+      background-image:
+        linear-gradient(45deg, rgba(197, 107, 27, 0.2) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(108, 187, 203, 0.2) 25%, transparent 25%),
+        linear-gradient(45deg, rgba(255, 255, 255, 0.1) 75%, transparent 75%),
+        linear-gradient(-45deg, rgba(0, 0, 0, 0.3) 75%, transparent 75%);
+      background-size: 80px 80px;
+      background-repeat: repeat;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    /*Loader animation */
+    .loader {
+      width: fit-content;
+      font-size: 40px;
+      font-family: system-ui,sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #0000;
+      -webkit-text-stroke: 1px #000;
+      --g:conic-gradient(#000 0 0) no-repeat text;
+      background: var(--g) 0,var(--g) 100%,var(--g) 0 0,var(--g) 0 100%;
+      animation: l5 2s linear infinite;
+    }
+    .loader:before {
+      content: "Loading";
+    }
+    @keyframes l5 {
+      0%,100%{background-size: 0   100%,0   100%,100% 0  ,100% 0  }
+      50%    {background-size: 55% 100%,55% 100%,100% 0  ,100% 0  }
+      50.01% {background-size: 0   100%,0   100%,100% 55%,100% 55%}
+    }
+    /* Glassy Overlay */
+    .glass-box {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 0 0 30px 30px;
+      padding: 20px;
+      margin: 0 auto;
+      width: 80%;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    a {
+      color: royalblue;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: grey;
+    }
+  </style>
 </head>
-<body style="background-color: black; color: white; font-family: 'Poppins', sans-serif; text-align: center;">
+<body>
+  <div class="loader"></div>
+
+  <div class="glass-box">
   <h1>Welcome to My Web Development Portfolio</h1>
   <p>Explore my projects below — each one reflects growth, creativity, and technical skill.</p>
 
@@ -17,7 +86,7 @@
     <!-- Add more projects as I upload them -->
   </ul>
 
-  <footer style="margin-top: 40px; font-size: 0.9em; color: grey;">
+  <footer>
     <p>Designed by Malayiah Mikell | IT Graduate & Web Enthusiast</p>
   </footer>
 </body>
