@@ -8,22 +8,25 @@
     /* Geometric Abstract Background */
     html {
       --s: 100px;
-      --c1: rgba(197, 107, 27, 0.2);  /* Rust orange */
-      --c2: rgba(108, 187, 203, 0.2); /* Light sky blue */
-      --c3: rgba(0, 0, 0, 0.2);       /* Black */
-      --c4: rgba(255, 255, 255, 0.1); /* White outline */
+      --c1: #c56b1b; /* Rust orange */
+      --c2: #6cbbcb; /* Light sky blue */
+      --c3: #000000; /* Black */
+      --c4: #ffffff; /* White outline */
 
-      background-image:
-        linear-gradient(45deg, var(--c1) 25%, transparent 25%),
-        linear-gradient(-45deg, var(--c2) 25%, transparent 25%),
-        linear-gradient(45deg, var(--c3) 75%, transparent 75%),
-        linear-gradient(-45deg, var(--c4) 75%, transparent 75%);
-      background-size: var(--s) var(--s);
-      background-repeat: repeat;
+      background:
+        conic-gradient(at calc(250%/3) calc(100%/3), var(--c3) 0 120deg, transparent 0),
+        conic-gradient(from -120deg at calc(50%/3) calc(100%/3), var(--c2) 0 120deg, transparent 0),
+        conic-gradient(from 120deg at calc(100%/3) calc(250%/3), var(--c1) 0 120deg, transparent 0),
+        conic-gradient(from 120deg at calc(200%/3) calc(250%/3), var(--c1) 0 120deg, transparent 0),
+        conic-gradient(from -180deg at calc(100%/3) 50%, var(--c2) 60deg, var(--c1) 0 120deg, transparent 0),
+        conic-gradient(from 60deg at calc(200%/3) 50%, var(--c1) 60deg, var(--c3) 0 120deg, transparent 0),
+        conic-gradient(from -60deg at 50% calc(100%/3), var(--c1) 120deg, var(--c2) 0 240deg, var(--c3) 0);
+      background-size: calc(var(--s) * sqrt(3)) var(--s);
       background-color: black;
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
+      color: white;
     }
     
     /*Loader animation for Header One */
@@ -74,8 +77,15 @@
       color: royalblue;
       text-decoration: none;
       font-weight: bold;
+      font-size: 1.2em;
     }
 
+     p.description {
+      margin: 10px 0 0;
+      font-size: 0.95em;
+      color: #e0e0e0;
+    } 
+    
     footer {
       margin-top: 40px;
       font-size: 0.9em;
@@ -91,9 +101,30 @@
 
   <ul>
     <li><a href="T6-Tables/index.html" style="color: royalblue;">T6: Tables – Shoe Sizing Webpage</a></li>
+    <p class="description">
+          Created during my associate’s degree, this project showcases a multi-page shoe sizing site using HTML tables and navigation features. 
+          It emphasizes usability, visual balance, and structured layout. 
+          <br><strong>Highlights:</strong> 5×6 shoe size chart, navigation menu, footer links, FTP deployment, validation cycles, and documentation.
+    </p>
+    </p>
     <li><a href="T7-Form/index.html" style="color: royalblue;">T7: Form – Payment Form Webpage</a></li>
+    <p class="description">
+          My first web form project, designed to demonstrate mastery of input types, fieldsets, and buttons. It includes a login and payment form with 
+          JavaScript-based redirection to the T6 homepage. I also implemented a datalist for state selection and field validation metrics.
+          <br><strong>Highlights:</strong> Full form structure, creative field usage, FTP deployment, validation, and documentation.
+    </p>
     <li><a href="T8-Media/index.html" style="color: royalblue;">T8: Media – Fashion Webpage</a></li>
+    <p class="description">
+          A media-rich fashion-themed page inspired by Steve Madden. Features a refined navigation bar with links to my GitHub homepage, shoe sizing table,
+          and payment form. Includes an embedded YouTube video showcasing Cypress platform boots and a brief product description.
+          <br><strong>Highlights:</strong> External/internal linking, embedded media, brand inspiration, and polished navigation.
+    </p>
     <li><a href="T9-Gallery/index.html" style="color: royalblue;">T9: Gallery – Gallery Webpage</a></li>
+    <p class="description">
+          My first JavaScript-powered photo gallery using original seasonal images. Each photo transitions after a few seconds, creating a dynamic visual experience.
+          This project emphasized image handling, transitions, and layout control.
+          <br><strong>Highlights:</strong> Seasonal themes, timed transitions, JavaScript integration, FTP deployment, and CSS3/HTML compliance (all projects).
+    </p>
     <!-- Add more projects as I upload them -->
   </ul>
 
