@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--
+      T9:Gallery
+      Author: Malayiah Mikell
+      Date:   10/31/2022
+
+      Filename: imaggallery.html
+
+   -->
+   
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>My Image Gallery</title>
+   <link href="image.css" rel="stylesheet">
+</head>
+
+<body>
+   <header>
+	<div class="navbar">
+		<a href="https://student.germanna.edu/mdm27456/index.html">Home</a>
+		<a href="https://www.stevemadden.com/collections/pink">News</a>
+		<div class="dropdown">
+			<button class="dropbtn">Dropdown
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="https://student.germanna.edu/mdm27456/mmedia.html">Overview</a>
+				<a href="https://student.germanna.edu/mdm27456/tables.html">Shop</a>
+				<a href="https://student.germanna.edu/mdm27456/form.html">Checkout</a>
+			</div>
+		</div>
+	</div>
+   </header>
+   
+   <section>
+   <h2>Four Seasons</h2>
+	<p>Welcome to my image gallery! It consists of four images from each season.</p>
+
+	<div class="slideshow-container">
+
+	<div class="mySlides fade">
+		<div class="numbertext">1 / 4</div>
+		<img src="Fall.jpg" style="width:100%" alt="Fall" height="600" width="500">
+		<div class="text">Joy ride home after spending time with family</div>
+	</div>
+
+	<div class="mySlides fade">
+		<div class="numbertext">2 / 4</div>
+		<img src="Spring.jpg" style="width:100%" alt="Spring" height="600" width="500">
+		<div class="text">Visiting an Art Museum during the Spring</div>
+	</div>
+
+	<div class="mySlides fade">
+		<div class="numbertext">3 / 4</div>
+		<img src="Summer.jpg" style="width:100%" alt="Summer" height="600" width="500">
+		<div class="text">Summer Celebration of Retirement(church)</div>
+	</div>
+	
+	<div class="mySlides fade">
+		<div class="numbertext">4 / 4</div>
+		<img src="Winter.jpg" style="width:100%" alt="Winter" height="600" width="500">
+		<div class="text">Winter Wonderland!</div>
+	</div>
+
+	</div>
+	<br>
+
+	<div style="text-align:center">
+		<span class="dot"></span> 
+		<span class="dot"></span> 
+		<span class="dot"></span> 
+	</div>
+  </section>
+  
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html> 
