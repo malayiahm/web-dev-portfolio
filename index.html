@@ -6,51 +6,63 @@
   <link rel="stylesheet" href="style.css"> <!-- Optional: add styling later -->
   <style>
     /* Geometric Abstract Background */
-    body {
-      background-color: black;
+    html {
+      --s: 100px;
+      --c1: rgba(197, 107, 27, 0.2);  /* Rust orange */
+      --c2: rgba(108, 187, 203, 0.2); /* Light sky blue */
+      --c3: rgba(0, 0, 0, 0.2);       /* Black */
+      --c4: rgba(255, 255, 255, 0.1); /* White outline */
+
       background-image:
-        linear-gradient(45deg, rgba(197, 107, 27, 0.2) 25%, transparent 25%),
-        linear-gradient(-45deg, rgba(108, 187, 203, 0.2) 25%, transparent 25%),
-        linear-gradient(45deg, rgba(255, 255, 255, 0.1) 75%, transparent 75%),
-        linear-gradient(-45deg, rgba(0, 0, 0, 0.3) 75%, transparent 75%);
-      background-size: 80px 80px;
+        linear-gradient(45deg, var(--c1) 25%, transparent 25%),
+        linear-gradient(-45deg, var(--c2) 25%, transparent 25%),
+        linear-gradient(45deg, var(--c3) 75%, transparent 75%),
+        linear-gradient(-45deg, var(--c4) 75%, transparent 75%);
+      background-size: var(--s) var(--s);
       background-repeat: repeat;
+      background-color: black;
       font-family: 'Poppins', sans-serif;
-      color: white;
-      text-align: center;
       margin: 0;
       padding: 0;
     }
-    /*Loader animation */
-    .loader {
-      width: fit-content;
+    
+    /*Loader animation for Header One */
+    h1.loader {
       font-size: 40px;
-      font-family: system-ui,sans-serif;
+      font-family: system-ui, sans-serif;
       font-weight: bold;
       text-transform: uppercase;
       color: #0000;
-      -webkit-text-stroke: 1px #000;
-      --g:conic-gradient(#000 0 0) no-repeat text;
-      background: var(--g) 0,var(--g) 100%,var(--g) 0 0,var(--g) 0 100%;
+      -webkit-text-stroke: 1px #fff;
+      --g: conic-gradient(#fff 0 0) no-repeat text;
+      background: var(--g) 0, var(--g) 100%, var(--g) 0 0, var(--g) 0 100%;
       animation: l5 2s linear infinite;
+      width: fit-content;
+      margin: 40px auto 0;
+      padding: 20px;
+      border-radius: 0 0 30px 30px;
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     }
-    .loader:before {
-      content: "Loading";
-    }
+
     @keyframes l5 {
-      0%,100%{background-size: 0   100%,0   100%,100% 0  ,100% 0  }
-      50%    {background-size: 55% 100%,55% 100%,100% 0  ,100% 0  }
-      50.01% {background-size: 0   100%,0   100%,100% 55%,100% 55%}
+      0%,100% { background-size: 0 100%, 0 100%, 100% 0, 100% 0 }
+      50%     { background-size: 55% 100%, 55% 100%, 100% 0, 100% 0 }
+      50.01%  { background-size: 0 100%, 0 100%, 100% 55%, 100% 55% }
     }
+
     /* Glassy Overlay */
     .glass-box {
       background: rgba(255, 255, 255, 0.1);
       border-radius: 0 0 30px 30px;
       padding: 20px;
-      margin: 0 auto;
+      margin: 20px auto;
       width: 80%;
       backdrop-filter: blur(6px);
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+      color: white;
+      text-align: center;
     }
     
     ul {
@@ -72,13 +84,12 @@
   </style>
 </head>
 <body>
-  <div class="loader"></div>
+  <h1 class="loader">Welcome to My Web Development Portfolio</h1>
 
   <div class="glass-box">
-  <h1>Welcome to My Web Development Portfolio</h1>
   <p>Explore my projects below — each one reflects growth, creativity, and technical skill.</p>
 
-  <ul style="list-style: none; padding: 0;">
+  <ul>
     <li><a href="T6-Tables/index.html" style="color: royalblue;">T6: Tables – Shoe Sizing Webpage</a></li>
     <li><a href="T7-Form/index.html" style="color: royalblue;">T7: Form – Payment Form Webpage</a></li>
     <li><a href="T8-Media/index.html" style="color: royalblue;">T8: Media – Fashion Webpage</a></li>
