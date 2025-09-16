@@ -1,0 +1,125 @@
+@charset "utf-8";
+/* HTML and Body styles */
+
+html {
+	background: black;
+	font-family: Verdana, Geneva, sans-serif;
+	color: rgb(255, 222, 173);
+	height: 100%;
+}
+
+body {
+	background-color: black;
+	box-shadow: rgb(222, 96, 3) 10px 0px 40px, rgb(239, 96, 3) -10px 0px 40px;
+	border-left: 1px solid rgb(50, 205, 50);
+	border-right: 1px solid rgb(50, 205, 50);
+	min-height: 100%;
+	margin: 0px auto;
+	min-width: 320px;
+	max-width: 1024px;
+	width: 100%;
+}
+
+/* Navigation list styles */
+
+header nav ul {
+	background: linear-gradient(to right, rgb(227, 187, 153) 20%, rgb(204, 37, 04));
+	width: 96.2%;
+}
+
+header nav ul li {
+	font-size: 1em;
+}
+
+header nav ul li a {
+	color: rgb(231, 231, 231);
+	text-shadow: rgb(51, 51 , 51) 0px 0px 1px, rgb(51, 51, 51) 0px 0px 8px;
+	display: block;
+	padding: 5px 20px;
+	width: 96.2%;
+}
+
+header nav ul li a:hover {
+	color: white;
+	background-color: rgb(204, 37, 04);
+}
+
+a#navicon {
+	display: none;
+}
+
+/*Header Styles*/
+
+header {
+	background: linear-gradient(to right, black, rgb(204, 37, 04), rgb(222, 2, 89), rgb(50, 205, 50));
+	border-bottom: 1px solid rgb(239, 96, 3);
+}
+
+header img#logoimg {
+	display: block;
+	margin: 0px auto;
+	width: 20%;
+}
+
+h1 {
+	background: rgb(224, 2, 89);
+}
+
+/*Section Styles*/
+
+section{
+	margin: 40px auto;
+	width: 85%;
+}
+
+/* Validation Styles */
+
+	input:not([type='radio']):focus {
+		background-color: rgb(255, 218, 165);
+	}
+
+	input:not([type='radio']):focus:valid {
+		background: rgb(215, 255, 215) right no-repeat;
+	}
+
+	input:not([type='radio']):focus:invalid {
+		background: rgb(255, 245, 215) right no-repeat;
+	}
+/* Footer styles */
+
+footer {
+	color: white;
+	background: linear-gradient(to bottom, rgb(227 187 153), rgb(50, 205, 50),
+	rgb(222, 2, 89), rgb(204, 37, 04), black);
+	font-size: 0.9em;
+	font-style: normal;
+}
+
+footer nav ul {
+	float: left;
+	padding: 30px;
+	width: 25%;
+}
+
+footer nav ul a {
+	color: white;
+}
+
+footer nav ul a:hover {
+	text-decoration: underline;
+}
+
+footer img.clipart {
+	float: left;
+	display: block;
+	width: 25%;
+	position: relative;
+	top: -60px;
+	left: -20px
+}
+
+footer::after {
+	display: table;
+	content: "";
+	clear: both;
+}
