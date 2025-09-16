@@ -8,25 +8,25 @@
     /* Geometric Abstract Background */
     html {
       --s: 84px; /* Cube size */
-      --c1: rgba(197, 107, 27, 0.25);  /* Rust orange (top face) */
-      --c2: rgba(108, 187, 203, 0.25); /* Light sky blue (left face) */
-      --c3: rgba(0, 0, 0, 0.25);       /* Black (right face) */
+      --c1: #c56b1b;  /* Rust orange (top face) */
+      --c2: #6cbbcb;  /* Light sky blue (left face) */
+      --c3: #000000;  /* Black (right face) */
+      --outline: rgba(255, 255, 255, 0.6); /* White edge outline */
 
-      background-color: black;
-      background-image:
-        conic-gradient(at calc(250%/3) calc(100%/3), var(--c3) 0 120deg, transparent 0),
-        conic-gradient(from -120deg at calc(50%/3) calc(100%/3), var(--c2) 0 120deg, transparent 0),
-        conic-gradient(from 120deg at calc(100%/3) calc(250%/3), var(--c1) 0 120deg, transparent 0),
-        conic-gradient(from 120deg at calc(200%/3) calc(250%/3), var(--c1) 0 120deg, transparent 0),
-        conic-gradient(from -180deg at calc(100%/3) 50%, var(--c2) 60deg, var(--c1) 0 120deg, transparent 0),
-        conic-gradient(from 60deg at calc(200%/3) 50%, var(--c1) 60deg, var(--c3) 0 120deg, transparent 0),
-        conic-gradient(from -60deg at 50% calc(100%/3), var(--c1) 120deg, var(--c2) 0 240deg, var(--c3) 0);
-      background-size: calc(var(--s) * sqrt(3)) var(--s);
-      background-repeat: repeat;
-      font-family: 'Poppins', sans-serif;
-      color: white;
-      margin: 0;
-      padding: 0;
+    background-color: black;
+    background-image:
+      linear-gradient(60deg, var(--outline) 1px, transparent 1px),
+      linear-gradient(-60deg, var(--outline) 1px, transparent 1px),
+      linear-gradient(0deg, var(--outline) 1px, transparent 1px),
+      conic-gradient(at calc(250%/3) calc(100%/3), var(--c3) 0 120deg, transparent 0),
+      conic-gradient(from -120deg at calc(50%/3) calc(100%/3), var(--c2) 0 120deg, transparent 0),
+      conic-gradient(from 120deg at calc(100%/3) calc(250%/3), var(--c1) 0 120deg, transparent 0);
+    background-size: calc(var(--s) * sqrt(3)) var(--s);
+    background-repeat: repeat;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
     }
     
     /*Loader animation for Header One */
@@ -57,12 +57,12 @@
 
     /* Glassy Overlay */
     .glass-box {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.15);
       border-radius: 0 0 30px 30px;
       padding: 20px;
       margin: 20px auto;
       width: 80%;
-      backdrop-filter: blur(6px);
+      backdrop-filter: blur(8px);
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
       color: white;
       text-align: center;
