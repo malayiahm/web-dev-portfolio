@@ -3,30 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <title>Malayiah Mikell | Web Development Portfolio</title>
-  <link rel="stylesheet" href="style.css"> <!-- Optional: add styling later -->
+  <link rel="stylesheet" href="style.css">
   <style>
-    /* Geometric Abstract Background */
+    /* Triangle Pinwheel Grid Background */
     html {
-      --s: 84px; /* Cube size */
-      --c1: #c56b1b;  /* Rust orange (top face) */
-      --c2: #6cbbcb;  /* Light sky blue (left face) */
-      --c3: #000000;  /* Black (right face) */
-      --outline: rgba(255, 255, 255, 0.6); /* White edge outline */
+      --s: 200px; /* control the size */
+      --c1: rgb(56,56,56);       /* Dark gray */
+      --c2: rgb(187,94,12);      /* Rust orange */
+      --c3: rgb(0,0,0);          /* Black */
+      --c4: rgb(70,152,175);     /* Light sky blue */
+      --c5: rgb(255,255,255);    /* White outline */
 
-    background-color: black;
-    background-image:
-      linear-gradient(60deg, var(--outline) 1px, transparent 1px),
-      linear-gradient(-60deg, var(--outline) 1px, transparent 1px),
-      linear-gradient(0deg, var(--outline) 1px, transparent 1px),
-      conic-gradient(at calc(250%/3) calc(100%/3), var(--c3) 0 120deg, transparent 0),
-      conic-gradient(from -120deg at calc(50%/3) calc(100%/3), var(--c2) 0 120deg, transparent 0),
-      conic-gradient(from 120deg at calc(100%/3) calc(250%/3), var(--c1) 0 120deg, transparent 0);
-    background-size: calc(var(--s) * sqrt(3)) var(--s);
-    background-repeat: repeat;
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    margin: 0;
-    padding: 0;
+      --_g: var(--c1) 25%, var(--c2) 0 50%, #0000 0;
+      --_l1: var(--c5) 0 1px, #0000 0 calc(25% - 1px), var(--c5) 0 25%;
+      --_l2: var(--c5) 0 1px, #0000 0 calc(50% - 1px), var(--c5) 0 50%;
+
+      background:
+        repeating-linear-gradient( 45deg, var(--_l1)),
+        repeating-linear-gradient(-45deg, var(--_l1)),
+        repeating-linear-gradient(  0deg, var(--_l2)),
+        repeating-linear-gradient( 90deg, var(--_l2)),
+        conic-gradient(from 135deg at 25% 75%, var(--_g)),
+        conic-gradient(from 225deg at 25% 25%, var(--_g)),
+        conic-gradient(from  45deg at 75% 75%, var(--_g)),
+        conic-gradient(from -45deg at 75% 25%, var(--_g)),
+        repeating-conic-gradient(var(--c3) 0 45deg, var(--c4) 0 90deg);
+      background-size: var(--s) var(--s);
+
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      margin: 0;
+      padding: 0;
     }
     
     /*Loader animation for Header One */
