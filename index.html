@@ -51,9 +51,9 @@
       margin: 40px auto 0;
       padding: 20px;
       border-radius: 0 0 30px 30px;
-      background-color: rgba(11, 55, 52, 0.1);
-      backdrop-filter: blur(6px);
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.42);
+      background-color: rgba(11, 55, 52, 0.225); /* Match glass-box overlay */
+      backdrop-filter: blur(8px);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.42); /* Match glass-box shadow */
     }
 
     @keyframes l5 {
@@ -64,14 +64,14 @@
 
     /* Glassy Overlay */
     .glass-box {
-      background: rgba(11, 55, 52, 0.15);
+      background: rgba(11, 55, 52, 0.225);
       border-radius: 0 0 30px 30px;
       padding: 20px;
       margin: 20px auto;
       width: 80%;
       backdrop-filter: blur(8px);
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.42);
-      color: white;
+      color: rgb(240,240,240); /* Soft white text for clarity */
       text-align: center;
     }
     
